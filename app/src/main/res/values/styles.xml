@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- colors -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/secondaryColor</item>
+        <item name="android:colorBackground">@color/primaryDarkColor</item>
+
+        <!-- font -->
+        <item name="android:fontFamily">@font/product_sans</item>
+        <item name="fontFamily">@font/product_sans</item>
+
+    </style>
+
+    <style name="TextInputEditText" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/loginTextColor</item>
+        <item name="android:textSize">20sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/loginTextColor</item>
+        <item name="colorControlNormal">@color/loginTextColor</item>
+        <item name="colorControlActivated">@color/loginTextColor</item>
+    </style>
+
+</resources>
