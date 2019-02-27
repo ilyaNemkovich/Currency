@@ -21,7 +21,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.vironit.android.currency.R;
 import com.vironit.android.currency.ui.activities.login.LoginActivity;
 import com.vironit.android.currency.ui.base.BaseFragment;
-import com.vironit.android.currency.ui.base.BasePresenter;
 import com.vironit.android.currency.ui.fragments.currencyList.adapter.CurrencyListAdapter;
 import com.vironit.android.currency.ui.fragments.currencyList.data.CryptoCurrencyResponseUI;
 
@@ -93,24 +92,9 @@ public class CurrencyListFragment extends BaseFragment implements ICurrencyListV
         mAdapter = new CurrencyListAdapter(covert);
         mRecyclerView.setAdapter(mAdapter);
 
+        currencyListPresenter.getCryptoList();
+
         return view;
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        currencyListPresenter.onCreateView();
-    }
-
-    @Override
-    protected BasePresenter getPresenter() {
-        return currencyListPresenter;
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        currencyListPresenter.onDestroyView();
     }
 
     public static CurrencyListFragment getInstance() {
