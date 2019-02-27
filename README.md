@@ -4,6 +4,6 @@ Used technologies:
 -MVP (Moxy)
 -RxJava2
 -Room
--Rettrofit2
+-Retrofit2
 -Dagger
 -Java
